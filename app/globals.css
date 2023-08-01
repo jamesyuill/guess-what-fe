@@ -90,3 +90,15 @@ img{
     border:2px solid red;
 }
 
+.stopstart{
+
+
+    
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    max-width: fit-content;
+    padding: 6px;
+
+}
+
