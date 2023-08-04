@@ -21,7 +21,8 @@ export default function SinglePlayerDisplay() {
     getAliens().then((res) => {
       setAlienObjects(res);
       setIsLoading(false);
-      setChosenAlien(chooseSecretAlien(res));
+     // setChosenAlien(chooseSecretAlien(res));
+     setChosenAlien(res[0])
     });
   }, []);
 
