@@ -3,6 +3,7 @@
 import { UserContext } from "@/contexts/User";
 import { useContext, useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export const LandingCard = () => {
   const { userOne, setUserOne } = useContext(UserContext);
@@ -64,6 +65,9 @@ export const LandingCard = () => {
             2 player
           </button>
         </div>
+        <button>
+          <Link href="/leaderboarddisplay">View Leaderboard</Link>
+        </button>
       </form>
     </div>
   );

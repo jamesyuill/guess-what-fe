@@ -144,19 +144,18 @@ body {
   border-radius: 15px;
 }
 
-
 /* ------------------ OPPONENT CARD ----------------------*/
 
-.opponentcard{
-    display: flex;
-    box-sizing: border-box;
-    justify-content: center;
-    position: relative;
-    grid-column: 5;
-    border: 2px solid black;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 15px;
-    width:100%;
+.opponentcard {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  position: relative;
+  grid-column: 5;
+  border: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  width: 100%;
 }
 
 .two-player-opponentcard {
@@ -166,16 +165,16 @@ body {
 }
 
 .grayscale {
-  filter: grayscale(100%)
+  filter: grayscale(100%);
 }
 
 .two-player-usercard {
   grid-column: 5;
   grid-row: 2;
   border: 2px solid black;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 15px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
 }
 
 .aliencard {
@@ -190,12 +189,17 @@ body {
 /* ------------------------ ALIEN CARD --------------------------- */
 
 .aliencard-container {
- height: 33%;
- width: 12%;
- position: relative;
+  height: 33%;
+  width: 12%;
+  position: relative;
 }
 
-.alien-planet, .alien-body, .alien-eyes, .alien-mouth, .alien-horns, .alien-antenna {
+.alien-planet,
+.alien-body,
+.alien-eyes,
+.alien-mouth,
+.alien-horns,
+.alien-antenna {
   position: absolute;
   top: 0;
   left: 0;
@@ -216,7 +220,6 @@ body {
   width: 100%;
   padding: 0.1rem;
   filter: grayscale(100%);
-  
 }
 
 .eliminate {
@@ -225,7 +228,6 @@ body {
   width: 100%;
   height: 100%;
   -webkit-user-drag: none;
-  
 }
 
 .alien-name-holder {
@@ -249,52 +251,50 @@ body {
 /* ---------------------------User Stats---------------------- */
 .user-stats {
   box-sizing: border-box;
-    border: 2px solid black;
-    justify-self: stretch;
-    grid-row: 3;
-    grid-column: 3/5 ;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 15px;
-    padding: 0.5rem;
-   
-    
+  border: 2px solid black;
+  justify-self: stretch;
+  grid-row: 3;
+  grid-column: 3/5;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  padding: 0.5rem;
 }
 .timer {
-    color: rgb(213, 192, 213);
-    background: rgb(95, 16, 137);
-    border-radius: 10px;
-    padding: 0.3rem;
-    padding-left:1rem;
-    padding-right: 1rem;
-    
-    min-width: 30%;
-    max-width: 50%;
-    justify-items: center;
-    display: flex;
-    justify-content:space-between;
-    margin: 0 auto;
+  color: rgb(213, 192, 213);
+  background: rgb(95, 16, 137);
+  border-radius: 10px;
+  padding: 0.3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  min-width: 30%;
+  max-width: 50%;
+  justify-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
 .alien-stats {
-    box-sizing: border-box;
-    border: 2px solid   rgb(213, 192, 213); 
-    display: flex;
-    justify-content: space-between;
-    padding: 0.3rem;
-    padding-left:1rem;
-    padding-right: 1rem;
-    color: rgb(213, 192, 213);
-    margin-top: 1rem;
-    background: rgb(95, 16, 137);
-    border-radius: 10px;
+  box-sizing: border-box;
+  border: 2px solid rgb(213, 192, 213);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: rgb(213, 192, 213);
+  margin-top: 1rem;
+  background: rgb(95, 16, 137);
+  border-radius: 10px;
 }
 .timer h1 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
-.timer h1, h2 {
-    display: inline;
-
+.timer h1,
+h2 {
+  display: inline;
 }
 
 .longer {
@@ -340,11 +340,11 @@ body {
   flex-wrap: wrap;
   font-size: 1rem;
   box-sizing: border-box;
-  grid-row: 3 ;
+  grid-row: 3;
   grid-column: 1/3;
-  width:100%;
-  min-width:40rem;
-  padding:0.5rem;
+  width: 100%;
+  min-width: 40rem;
+  padding: 0.5rem;
   border: 2px solid black;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 15px;
@@ -352,7 +352,7 @@ body {
 #question-variable {
   width: 15vw;
   background-color: white;
-  height:2.5rem;
+  height: 2.5rem;
   padding-top: 0.5rem;
 }
 
@@ -362,34 +362,37 @@ body {
 
 .question-btn {
   padding: 0.3rem;
-  padding-left:1rem;
-  padding-right:1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   font-weight: bold;
- 
+
   background-color: rgb(95, 16, 137);
-  color:rgb(213, 192, 213);
+  color: rgb(213, 192, 213);
   border-radius: 10px;
 }
 
 .question-btn:hover {
   padding: 0.3rem;
-  padding-left:1rem;
-  padding-right:1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   font-weight: bold;
- 
-  background-color: linear-gradient(30deg, rgb(95, 16, 137) 5%, rgb(244, 48, 48));
-  color:white;
+
+  background-color: linear-gradient(
+    30deg,
+    rgb(95, 16, 137) 5%,
+    rgb(244, 48, 48)
+  );
+  color: white;
   text-shadow: 0px 0px 3px white;
   border-radius: 10px;
 }
 
 #guess-form {
   display: flex;
-    
-    padding-right: 1rem;
-    color: black;
-    border-radius: 10px;
-  
+
+  padding-right: 1rem;
+  color: black;
+  border-radius: 10px;
 }
 
 #question-prompt-container {
@@ -401,7 +404,7 @@ body {
   margin: auto 0.5rem;
 }
 
-#question-prompt{
+#question-prompt {
   font-weight: 500;
   padding-top: 0.5rem;
 }
@@ -418,15 +421,14 @@ body {
   padding: 0.3rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  width:auto;
+  width: auto;
   color: rgb(213, 192, 213);
-  background:  rgb(95, 16, 137);
+  background: rgb(95, 16, 137);
   border-radius: 10px;
 }
 
-
 #question-submit-btn:hover {
-  margin:auto;
+  margin: auto;
   padding: 0.3rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -441,15 +443,14 @@ body {
   padding: 0.3rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  width:auto;
+  width: auto;
   color: rgb(213, 192, 213);
-  background:  rgb(95, 16, 137);
+  background: rgb(95, 16, 137);
   border-radius: 10px;
 }
 
-
 .guess-btn:hover {
-  margin:auto;
+  margin: auto;
   padding: 0.3rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -470,9 +471,6 @@ body {
  
 } */
 
-
-
-
 .response-div {
   visibility: hidden;
   position: absolute;
@@ -483,23 +481,39 @@ body {
 }
 
 @-webkit-keyframes moveout {
-  from {right:220px}
-  to{right:0px}
+  from {
+    right: 220px;
+  }
+  to {
+    right: 0px;
+  }
 }
 
 @keyframes moveout {
-  from {right:220px}
-  to{right:0px}
+  from {
+    right: 220px;
+  }
+  to {
+    right: 0px;
+  }
 }
 
 @-webkit-keyframes fadeout {
-  from {opacity: 1;}
-  to {opacity: 0;}
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes fadeout {
-  from {opacity: 1;}
-  to {opacity: 0;}
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .response-div-show {
@@ -509,15 +523,13 @@ body {
   right: 8%;
   z-index: 2;
   width: 300px;
-  
+
   -webkit-animation-name: fadeout, moveout;
   -webkit-animation-duration: 1s, 0.1s;
   -webkit-animation-delay: 1s, 4.1s;
   -webkit-animation-fill-mode: forwards;
   animation-name: fadeout, moveout;
   animation-duration: 1s, 0.1s;
-
-
 }
 
 .response-div-show img {
@@ -533,7 +545,7 @@ body {
   left: 21%;
   display: flex;
   width: 150px;
-  height:150px;
+  height: 150px;
 
   font-weight: 600;
   text-align: center;
@@ -542,63 +554,94 @@ body {
 }
 
 .loading-state-container {
-    z-index: 9;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 0 10px black;
-
+  z-index: 9;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 10px black;
 }
 
 .loading-state {
-    all: revert;
-    z-index: 10;
-    position: absolute;
-    top: 35%;
-    left: 45%;
-    color: black;
-    font-size: 2em;
-    max-height: inherit;
-    text-shadow: 0px 0px 5px white, 0px 0px 10px white, 0px 0px 15px white;
-    display: flex;
-    width: 20%;
-    max-width: 200px;
-    flex-direction: column;
-    align-items: center;
+  all: revert;
+  z-index: 10;
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  color: black;
+  font-size: 2em;
+  max-height: inherit;
+  text-shadow: 0px 0px 5px white, 0px 0px 10px white, 0px 0px 15px white;
+  display: flex;
+  width: 20%;
+  max-width: 200px;
+  flex-direction: column;
+  align-items: center;
 }
 
 #flying-saucer {
-    max-width: 100%;
-    filter: drop-shadow(0px 0px 10px white);
+  max-width: 100%;
+  filter: drop-shadow(0px 0px 10px white);
 }
 
-
-
-
-
-.question-mark{
-    
-    margin-top: auto;
-    margin-bottom: auto;
-    text-align: center;
-    color: rgb(14, 41, 137);
-    font-size: 100px;
+.question-mark {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  color: rgb(14, 41, 137);
+  font-size: 100px;
 }
-.winner-card{
-    width: 200px;
-    height: auto;
-    margin: 0 auto;
-    z-index: 100;
+.winner-card {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  z-index: 100;
 }
-.text-box{
-    width: 500px;
-    height: 500px;
+.text-box {
+  width: 500px;
+  height: 500px;
 }
-.text-box h1{
+.text-box h1 {
   font-size: 30px;
   font-weight: 900;
   color: rgb(45, 31, 174);
-} 
+}
+
+.leaderboard {
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 40rem;
+  padding: 0.5rem;
+  border: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+}
+
+.leaderboard-text-box {
+  width: 50vw;
+  height: 50vh;
+  background-color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  top: 25%;
+  left: 25%;
+  z-index: 2;
+  border-radius: 15px;
+  padding: 25px;
+  border: 2px solid black;
+}
+
+.result-row > * {
+  border: 1px solid black;
+  min-width: 10vw;
+}
+
+.result-row {
+  display: flex;
+  flex-direction: row;
+}

@@ -10,6 +10,7 @@ import UserStats from "@/components/UserStats";
 import { useState, useEffect } from "react";
 import { getAliens } from "../utils/getAliens";
 import chooseSecretAlien from "../utils/chooseSecretAlien";
+import LeaderBoardModal from "@/components/LeaderBoardModal";
 
 export default function SinglePlayerDisplay() {
   const [isGameFinished, setIsGameFinished] = useState(false);
@@ -32,6 +33,7 @@ export default function SinglePlayerDisplay() {
     <main>
       <Header />
       <div className="game-wrapper">
+        {/* needs setting back to is game finished */}
         {isGameFinished && (
           <EndGameModal
             chosenAlien={chosenAlien}
@@ -39,6 +41,8 @@ export default function SinglePlayerDisplay() {
             setHasWon={setHasWon}
           />
         )}
+        {/* needs setting back to is game finished */}
+        <LeaderBoardModal />
         <Gameboard
           isLoading={isLoading}
           alienObjects={alienObjects}
@@ -53,7 +57,10 @@ export default function SinglePlayerDisplay() {
           setHasWon={setHasWon}
         />
         <OpponentCard />
-        <UserStats alienObjects={alienObjects} isGameFinished={isGameFinished}/>
+        <UserStats
+          alienObjects={alienObjects}
+          isGameFinished={isGameFinished}
+        />
       </div>
       <Footer />
     </main>
