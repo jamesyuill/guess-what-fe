@@ -8,11 +8,10 @@ import { useRouter } from 'next/navigation';
 import { useContext, useEffect, useState } from 'react';
 const { io } = require('socket.io-client');
 
-const socket = io('https://guess-what-api.onrender.com/');
+const socket = io('http://localhost:8080'); // https://guess-what-api.onrender.com/
 
 export default function LobbyModal({
   setIsLoading,
-
   alienObjects,
   setAlienObjects,
   chosenAlien,

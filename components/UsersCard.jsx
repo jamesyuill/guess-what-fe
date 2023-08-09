@@ -16,28 +16,32 @@ export default function UsersCard({ isLoading }) {
     }
   }, [isLoading]);
 
-  if (usersAlien._id) {
+  if (usersAlien) {
     return (
       <div className="two-player-usercard">
         <div className="alien-img">
-          <img
+          {usersAlien.planet ? <img
             className="alien-planet"
             src={`assets/alien-layers/planet-${usersAlien.planet}.png`}
-          />
-          <img
+          /> : null}
+          
+          {usersAlien.skinColour && usersAlien.skinTexture ? <img
             className="alien-body"
             src={`assets/alien-layers/body-${usersAlien.skinColour}-${usersAlien.skinTexture}.png`}
-          />
-          <img
+          /> : null}
+          
+          {usersAlien.eyeColour && usersAlien.eyes ? <img
             className="alien-eyes"
             src={`assets/alien-layers/eyes-${usersAlien.eyeColour}-${usersAlien.eyes}.png`}
-          />
-          <img
+          /> : null}
+          
+          {usersAlien ? <img
             className="alien-mouth"
             src={`assets/alien-layers/mouth-${
               usersAlien.isFriendly ? 'friendly' : 'unfriendly-a'
             }.png`}
-          />
+          /> : null}
+
           {usersAlien.horns ? (
             <img
               className="alien-horns"
