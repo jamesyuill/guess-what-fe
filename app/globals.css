@@ -945,7 +945,7 @@ h2 {
 
   .game-wrapper {
     display: grid;
-    grid-template-columns: 13rem 11rem 4rem 7rem 130px;
+    grid-template-columns: 12rem 12rem 5rem 7rem 115px;
     grid-template-rows: 10rem 9rem 4rem;
     justify-items: start;
   }
@@ -983,6 +983,7 @@ h2 {
     margin: 0;
     display: flex;
     flex-direction: column;
+
     width: 100%;
     margin: 0;
     font-size: 0.6rem;
@@ -995,23 +996,35 @@ h2 {
     background-color: rgba(255, 255, 255, 0.85);
 
     border-radius: 15px;
-    background-color: aqua;
+  }
+
+  .question-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0;
   }
 
   #question-prompt-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
     margin: 0;
     padding: 0;
   }
 
-  /* #question-variable {
+  #question-variable {
     font-weight: bold;
     margin: 0;
     padding: 0;
+    font-size: 0.7rem;
+    padding-top: 10px;
 
-    height: auto;
     width: 100px;
   }
-
+  /*
   .questioncard * {
     margin: 0;
     padding: 0;
@@ -1019,46 +1032,28 @@ h2 {
 
   .question-btn {
     font-weight: bold;
-    width: 30px;
-    height: 1rem;
-    background-color: rgb(95, 16, 137);
-    color: rgb(213, 192, 213);
+    font-size: large;
+    background: none;
+    color: black;
+    padding: 0;
+    margin: 0;
   }
 
   .question-btn:hover {
-    font-weight: bold;
-    width: 30px;
-    height: 1rem;
-    background-color: linear-gradient(
-      30deg,
-      rgb(95, 16, 137) 5%,
-      rgb(244, 48, 48)
-    );
-    color: white;
-    /* text-shadow: 0px 0px 3px white; */
-  }
-
-  /* #guess-form {
-    display: flex;
-
-    color: black;
-    border-radius: 10px;
-  }
-
-
-
-  #question-prompt {
-    margin: 0;
     padding: 0;
-    font-weight: 600;
-
-    font-size: 0.7rem;
-  } */
+    margin: 0;
+    font-weight: bold;
+    font-size: large;
+    background: none;
+    color: black;
+    text-shadow: 1px 1px 2px rgb(255, 0, 0);
+  }
 
   .question-submit-btn {
     margin: 0;
     padding: 0;
-    width: 90px;
+    width: 60px;
+    padding: 0.25rem;
     color: rgb(213, 192, 213);
     background: rgb(95, 16, 137);
     border-radius: 10px;
@@ -1070,20 +1065,43 @@ h2 {
     background: linear-gradient(30deg, rgb(95, 16, 137) 5%, rgb(244, 48, 48));
     border-radius: 10px;
     color: white;
-    width: 90px;
+    width: 60px;
+
+    padding: 0.25rem;
+  }
+
+  .guess-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+
+  #guess-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0.5rem;
+    width: 100%;
   }
 
   .guess-btn {
-    width: auto;
     color: rgb(213, 192, 213);
     background: rgb(95, 16, 137);
     border-radius: 10px;
+    width: 60px;
+
+    margin-top: 0.5rem;
   }
 
   .guess-btn:hover {
     background: linear-gradient(30deg, rgb(95, 16, 137) 5%, rgb(244, 48, 48));
     border-radius: 10px;
     color: white;
+    width: 60px;
+    margin-top: 0.5rem;
   }
 
   .user-stats {
@@ -1129,5 +1147,88 @@ h2 {
     color: white;
     font-weight: 600;
     font-size: 0.6rem;
+  }
+
+  .response-div {
+    visibility: hidden;
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    z-index: 2;
+    width: 0px;
+  }
+
+  @-webkit-keyframes moveout {
+    from {
+      right: 220px;
+    }
+    to {
+      right: 0px;
+    }
+  }
+
+  @keyframes moveout {
+    from {
+      right: 220px;
+    }
+    to {
+      right: 0px;
+    }
+  }
+
+  @-webkit-keyframes fadeout {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeout {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .response-div-show {
+    visibility: visible;
+    position: absolute;
+    top: 4%;
+    right: 10%;
+    z-index: 2;
+    width: 100px;
+
+    -webkit-animation-name: fadeout, moveout;
+    -webkit-animation-duration: 1s, 0.1s;
+    -webkit-animation-delay: 1s, 4.1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: fadeout, moveout;
+    animation-duration: 1s, 0.1s;
+  }
+
+  .response-div-show img {
+    position: relative;
+    z-index: 2;
+    width: 19rem;
+  }
+
+  .response-text {
+    position: absolute;
+
+    top: -20px;
+    left: -10px;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.5rem;
+    justify-content: center;
+    z-index: 3;
   }
 }

@@ -179,62 +179,66 @@ export default function QuestionCard({
     if (isPlaying) {
       return (
         <div className="questioncard">
-          <div id="question-prompt-container">
+          <div className="question-container">
             <p id="question-prompt">Does your alien have... </p>
-            <button
-              onClick={() => {
-                indexIncrementer(-1);
-              }}
-              className="question-btn"
-            >
-              ←
-            </button>
-            <p id="question-variable">{validQuestions[indexer].question}</p>
-            <button
-              onClick={() => {
-                indexIncrementer(+1);
-              }}
-              className="question-btn"
-            >
-              →
-            </button>
-            <button
-              onClick={() => {
-                handleSubmit();
-              }}
-              className="question-submit-btn"
-            >
-              Submit
-            </button>
-          </div>
-          <form
-            id="guess-form"
-            onSubmit={(e) => {
-              submitGuess(e);
-            }}
-          >
-            <select
-              onChange={(e) => {
-                setGuess(e.target.value), setHasWon(null), setAnswer(null);
-              }}
-            >
-              <option>Take a guess</option>
-              {alienObjects.map((alien) => {
-                if (alien.isActive) {
-                  return (
-                    <option value={alien._id} key={alien.name}>
-                      {alien.name}
-                    </option>
-                  );
-                }
-              })}
-            </select>
-            {guess ? (
-              <button className="guess-btn" id="guess-btn">
-                Guess
+            <div id="question-prompt-container">
+              <button
+                onClick={() => {
+                  indexIncrementer(-1);
+                }}
+                className="question-btn"
+              >
+                ⇦
               </button>
-            ) : null}
-          </form>
+              <p id="question-variable">{validQuestions[indexer].question}</p>
+              <button
+                onClick={() => {
+                  indexIncrementer(+1);
+                }}
+                className="question-btn"
+              >
+                ⇨
+              </button>
+              <button
+                onClick={() => {
+                  handleSubmit();
+                }}
+                className="question-submit-btn"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+          <div className="guess-container">
+            <form
+              id="guess-form"
+              onSubmit={(e) => {
+                submitGuess(e);
+              }}
+            >
+              <select
+                onChange={(e) => {
+                  setGuess(e.target.value), setHasWon(null), setAnswer(null);
+                }}
+              >
+                <option>Take a guess</option>
+                {alienObjects.map((alien) => {
+                  if (alien.isActive) {
+                    return (
+                      <option value={alien._id} key={alien.name}>
+                        {alien.name}
+                      </option>
+                    );
+                  }
+                })}
+              </select>
+              {guess ? (
+                <button className="guess-btn" id="guess-btn">
+                  Guess
+                </button>
+              ) : null}
+            </form>
+          </div>
           <OpponentResponse answer={answer} hasWon={hasWon} />
         </div>
       );
