@@ -19,19 +19,18 @@ export const LandingCard = () => {
   const router = useRouter();
 
   useEffect(() => {
-    localStorage.setItem('thisUser', JSON.stringify(thisUser))
-  }, [thisUser, users, yourSocket]
-  )
+    localStorage.setItem('thisUser', JSON.stringify(thisUser));
+  }, [thisUser, users, yourSocket]);
 
   useEffect(() => {
     if (users.allAliens.length) {
-      localStorage.setItem('users', JSON.stringify(users))
+      localStorage.setItem('users', JSON.stringify(users));
     }
-  }, [users])
+  }, [users]);
 
   useEffect(() => {
-    localStorage.setItem('statsObject', JSON.stringify(statsObject))
-  }, [statsObject])
+    localStorage.setItem('statsObject', JSON.stringify(statsObject));
+  }, [statsObject]);
 
   useEffect(() => {
     getAliens().then((res) => {
